@@ -3,8 +3,10 @@
 ```bash
 ~/
 > git clone git@github.com:RyosukeNAKATA/scrapeing_with_rust.git
+
 ~/ 
 > cd scrapeing_with_rust
+
 ~/scrapeing_with_rust
 > cargo run
    Compiling scrapeing_with_rust v0.1.0 (/Users/ryosuke/scrapeing_with_rust)
