@@ -19,6 +19,7 @@ fn main() {
             _ => continue,
         }
     }
+    versions.sort();
     for ver in &versions {
         let tar_url = format!(
             "https://www.python.org/ftp/python/{}/Python-{}.tar.xz",
