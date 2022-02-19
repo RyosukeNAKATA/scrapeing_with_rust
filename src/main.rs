@@ -1,6 +1,7 @@
+use chrono::NaiveDateTime;
 use semver::Version;
 
-fn main() {
+fn main() -> Result<(), Box<dyn std::error::Error>> {
     let value = reqwest::blocking::get(format!("https://www.python.org/ftp/python/").as_str())
         .unwrap()
         .text()
@@ -25,6 +26,11 @@ fn main() {
             "https://www.python.org/ftp/python/{}/Python-{}.tar.xz",
             ver, ver
         );
-        println!("{} - {}", ver, tar_url)
+        println!("{} - {}", ver, tar_url);
+        let custom = NaiveDateTime::parse_from_str("05-Nov-2021 21:15", "%d-%b-%Y %H:%M")?;
+        println!("{}", custom);
+        println!("============================================================================");
     }
+
+    Ok(())
 }
